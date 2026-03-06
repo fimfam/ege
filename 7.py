@@ -15,7 +15,13 @@
 # otvet=3742-690*5
 # print(otvet))
 
-odnak=1920*1080*9*80
-proc=odnak*60/100
-rez=proc/50000000
+# odnak=1920*1080*9*80
+# proc=odnak*60/100
+# rez=proc/50000000
+# print(rez)
+
+v1=60*1000*2*10*10800
+v2vmb=10800*4
+v2=v2vmb*1024*1024*8
+rez=v2/v1
 print(rez)

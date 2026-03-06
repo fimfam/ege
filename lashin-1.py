@@ -52,10 +52,7 @@ def n14():
         if n1==n2:
             print(p, to_d('purr',p))
 
-def n16():
-    @lru_cache()
 
-    def g(n)
 
 
 

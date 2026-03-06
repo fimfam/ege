@@ -55,12 +55,23 @@
 # print(f(2049))
 
 
-from functools import*
-from sys import*
-setrecursionlimit(1000)
-@lru_cache()
-def g(n):
-    if n<25:
-        return n
-    return (n-5)*g(n-6)
-print((g(60000)-315*g(59994))//g(59988))
+# from functools import*
+# from sys import*
+# setrecursionlimit(1000)
+# @lru_cache()
+# def g(n):
+#     if n<25:
+#         return n
+#     return (n-5)*g(n-6)
+# print((g(60000)-315*g(59994))//g(59988))
+
+# from functools import*
+# from sys import*
+# setrecursionlimit(100000)
+# @lru_cache()
+# def g(n):
+#     if n<=6:
+#         return 5**n
+#     return g(n-3)+2
+# print(g(50000)+g(150000))
+#     

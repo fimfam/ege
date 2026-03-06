@@ -31,12 +31,15 @@
 #     if n%155==0:
 #         print(n//155)
 
+# from string import*
+# s=ascii_lowercase
+# for x in s[6:11]:
+#     for y in "0123456789" + s[:int(x,36)-10]:
+#         n1=f"13F1{y}"
+#         n2=f"15{x}5{y}"
+#         n=int(n1,int(x,36))+int(n2,21)
+#         if n%32==0:
+#             print(n//32)
+
 from string import*
 s=ascii_lowercase
-for x in s[6:11]:
-    for y in "0123456789" + s[:int(x,36)-10]:
-        n1=f"13F1{y}"
-        n2=f"15{x}5{y}"
-        n=int(n1,int(x,36))+int(n2,21)
-        if n%32==0:
-            print(n//32)
