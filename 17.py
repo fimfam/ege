@@ -1,4 +1,26 @@
-with open("C:/Users/1/Downloads/17_24200.txt") as f:
+# with open("C:/Users/Dasha/Downloads/17_24200.txt") as f:
+#     l=f.readlines()
+#     l=list(map(int,l))
+# print(l[3])
+# n=0
+# for i in l:
+#     if i%2==0:
+#         n=n+1
+# print(n)
+# d=0
+# m=-100000000000000000
+# for i in range(len(l)-1):
+#     if (abs(l[i])>=1000 and abs(l[i])%1000<100) or (abs(l[i+1])>=1000 and abs(l[i+1])%1000<100):
+#         if l[i]*l[i+1]%n==0:
+#             d=d+1
+#             m=max(m,l[i]+l[i+1])
+# print(d,m)
+
+
+with open("C:/Users/Dasha/Downloads/17_27301.txt") as f:
     l=f.readlines()
     l=list(map(int,l))
-    
+print(l[1])
+
+
+
