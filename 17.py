@@ -17,10 +17,29 @@
 # print(d,m)
 
 
-with open("C:/Users/Dasha/Downloads/17_27301.txt") as f:
+with open("C:/Users/1/Downloads/17_27301.txt") as f:
     l=f.readlines()
     l=list(map(int,l))
 print(l[1])
+
+p=[]
+for i in l:
+    if str(abs(i))[:2]=="45":
+        p.append(i)
+print(max(p))
+d=0
+w=[]
+for i in range(len(l)-3):
+    if (l[i]<0)+(l[i+1]<0)+(l[i+2]<0)==1:
+        if l[i]+l[i+1]+l[i+2]>=max(p):
+            d=d+1
+            if str(abs(l[i]+l[i+1]+l[i+2]))[-2:]=="45":
+                w.append(l[i]+l[i+1]+l[i+2])
+print(d,min(w))
+
+
+
+
 
 
 
