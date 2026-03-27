@@ -40,6 +40,27 @@
 #         n=int(n1,int(x,36))+int(n2,21)
 #         if n%32==0:
 #             print(n//32)
+def to_n(n,b):
+    rez=""
+    while n>0:
+        a=str(n%b)
+        rez=a+rez
+        n=n//b
+    return rez
 
-from string import*
-s=ascii_lowercase
+
+d=[]
+g=10**100
+ix=0
+for x in range(1,2030):
+    a=6**2030+6**100-x
+    p=to_n(a,6)
+    s=p.count("0")
+    if s<g:
+        g=s
+
+
+
+print(g)
+
+

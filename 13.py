@@ -1,7 +1,8 @@
-a=bin(794)
+a=bin(800)
 print(a)
-b=int("100111001",2)
+b=int("1000100000",2)
 print(b)
+
 
 # c=0
 # for i in range(2**14):
@@ -9,3 +10,10 @@ print(b)
 #     if (s.count("1")+8)%7!=0:
 #         c=c+1
 # print(c)
+# l=[]
+# d=0
+# for x in range(0,2**13):
+#     x=bin(x)
+#     if (7+x.count("1"))%2==0:
+#         d=d+1
+# print(d)
