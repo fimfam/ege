@@ -101,21 +101,33 @@
 #     if int(r,3)<=273:
 #         print(n)
 
-def to_n(n,b):
-    rez=""
-    while n>0:
-        a=str(n%b)
-        rez=a+rez
-        n=n//b
-    return rez
-l=list()
-for n in range(1,130):
-    r=to_n(n,12)
-    if n%4==0:
-        r="A"+r+"B"
-    else:
-        r="1"+r+"0"
-    if int(r,12)>2025:
-        l.append(int(r,12))
+# def to_n(n,b):
+#     rez=""
+#     while n>0:
+#         a=str(n%b)
+#         rez=a+rez
+#         n=n//b
+#     return rez
+# l=list()
+# for n in range(1,130):
+#     r=to_n(n,12)
+#     if n%4==0:
+#         r="A"+r+"B"
+#     else:
+#         r="1"+r+"0"
+#     if int(r,12)>2025:
+#         l.append(int(r,12))
+#
+# print(min(l))
 
-print(min(l))
+
+l=[]
+for n in range(1,140):
+    r=bin(n)[2:]
+    if n%3==0:
+        r=r+r[-2]+r[-1]
+    else:
+        ost=bin(n%3*3)[2:]
+        r=r+ost
+        print(n,int(r,2))
+

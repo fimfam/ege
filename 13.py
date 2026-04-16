@@ -1,6 +1,6 @@
 a=bin(800)
 print(a)
-b=int("1000100000",2)
+b=int("54501",6)
 print(b)
 
 
