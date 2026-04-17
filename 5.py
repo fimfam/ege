@@ -122,12 +122,14 @@
 
 
 l=[]
-for n in range(1,140):
+for n in range(10,140):
     r=bin(n)[2:]
     if n%3==0:
-        r=r+r[-2]+r[-1]
+        r=r+r[-3]+r[-2]+r[-1]
     else:
         ost=bin(n%3*3)[2:]
         r=r+ost
-        print(n,int(r,2))
+    l.append((int(r,2),n))
+l.sort()
+print(*l, sep='\n')
 
