@@ -39,26 +39,33 @@
 
 
 
-with open("C:/Users/1/Downloads/17_27629.txt") as f:
+# with open("C:/Users/1/Downloads/17_27629.txt") as f:
+#     l=f.readlines()
+#     l=list(map(int,l))
+# p=[]
+# for i in l:
+#     if abs(i)>999 and abs(i)<10000:
+#         if str(i)[-2:]=="43":
+#             p.append(i)
+# print(max(p))
+# d=0
+# r=[]
+# for i in range(len(l)-1):
+#     if 999<abs(l[i])<10000 or 999<abs(l[i+1])<10000:
+#         if (l[i]+l[i+1])**2<(max(p))**2:
+#             d=d+1
+#             r.append((l[i]+l[i+1])**2)
+#
+# print(d,max(r))
+#
+
+with open("C:/Users/1/Downloads/17_28762.txt") as f:
     l=f.readlines()
     l=list(map(int,l))
+print(l[:5])
 p=[]
 for i in l:
-    if abs(i)>999 and abs(i)<10000:
-        if str(i)[-2:]=="43":
-            p.append(i)
-print(max(p))
-d=0
-r=[]
-for i in range(len(l)-1):
-    if 999<abs(l[i])<10000 or 999<abs(l[i+1])<10000:
-        if (l[i]+l[i+1])**2<(max(p))**2:
-            d=d+1
-            r.append((l[i]+l[i+1])**2)
-
-print(d,max(r))
-
-
-
+    if i%23==0:
+        p.append(i)
 
 
