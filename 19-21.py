@@ -89,33 +89,46 @@
 #         print(s)
 #
 
-def f(n1,n2,h):
-    if n1+n2>=99:
-        if h%2==t%2:
-            return 1
-        else:
-            return 0
-    if h>t:
-        return 0
-    if h%2==t%2:
-        return f(n1+1,n2,h+1) and f(n1,n2+1,h+1) and f(n1*3,n2,h+1) and f(n1,n2*3,h+1)
-    else:
-        return f(n1 + 1, n2, h + 1) or f(n1, n2 + 1, h + 1) or f(n1 * 3, n2, h + 1) or f(n1, n2 * 3, h + 1)
+# def f(n1,n2,h):
+#     if n1+n2>=99:
+#         if h%2==t%2:
+#             return 1
+#         else:
+#             return 0
+#     if h>t:
+#         return 0
+#     if h%2==t%2:
+#         return f(n1+1,n2,h+1) and f(n1,n2+1,h+1) and f(n1*3,n2,h+1) and f(n1,n2*3,h+1)
+#     else:
+#         return f(n1 + 1, n2, h + 1) or f(n1, n2 + 1, h + 1) or f(n1 * 3, n2, h + 1) or f(n1, n2 * 3, h + 1)
+# # for s in range(1,99):
+# #     if f(9,s,0)==1:
+# #         print((s))
+#
+# l=[]
+# t=2
 # for s in range(1,99):
 #     if f(9,s,0)==1:
-#         print((s))
+#         l.append(s)
+# print(l)
+# t=4
+# for s in range(1,99):
+#     if f(9,s,0) and s not in l:
+#         print(s)
 
-l=[]
+
 t=2
-for s in range(1,99):
-    if f(9,s,0)==1:
-        l.append(s)
-print(l)
-t=4
-for s in range(1,99):
-    if f(9,s,0) and s not in l:
-        print(s)
+def f(n1,n2,h):
+    if n1+n2>=211:
+        if t%2==h%2:
+            return 1
+    if h>t:
+        return 0
+    if t%2==h%2:
+        return f(n1+1,n2,h+1) and f(n1,n2+1,h+1) and f(n1*2,n2,h+1) and f(n1,n2*2,h+1)
+    else:
+        return f(n1+1,n2,h+1) or f(n1,n2+1,h+1) or f(n1*2,n2,h+1) or f(n1,n2*2,h+1)
 
-
-
+for s in range(1,194):
+    
 

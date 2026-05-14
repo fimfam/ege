@@ -15,3 +15,10 @@ for m in (0,1):
                 f=(m<=e) or (o==e) and w
                 if f==0:
                     print(m,e,o,w, sep="  ")
+
+
+
+
+
+
+
