@@ -74,4 +74,16 @@
 #         return 5**n
 #     return g(n-3)+2
 # print(g(50000)+g(150000))
-#     
+
+from functools import*
+from sys import*
+setrecursionlimit(10000)
+@lru_cache()
+def g(n):
+    if n==1:
+        return 1
+    return n*g(n-1)
+print((g(2024)-5*g(2023))//g(2022))
+
+
+

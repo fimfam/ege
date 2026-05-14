@@ -39,3 +39,11 @@
 #     if f==1:
 #         print(A)
 
+for A in range(1,1000):
+    f=1
+    for x in range(1,1000):
+        Fu=(x%25==0)<=((not(x%A==0))<=(not(x%60==0)))
+        if Fu==False:
+            f=0
+    if f==1:
+        print(A)
