@@ -74,13 +74,14 @@
 # print(int("10000000000",2))
 
 #16
-from functools import*
-from sys import *
-setrecursionlimit(10000000)
-@lru_cache()
-def f(n):
-    if n<10:
-        return 1
-    else:
-        return (n+3)*f(n-3)
-print((f(247563)//519-477*f(247560))//f(247557))
+# from functools import*
+# @lru_cache(250000)
+# def f(n):
+#     if n<10:
+#         return 1
+#     else:
+#         return (n+3)*f(n-3)
+# print(247563%3)
+# for i in range(3,247563):
+#     f(i)
+# print((f(247563)//519-477*f(247560))//f(247557))
