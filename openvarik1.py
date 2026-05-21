@@ -85,3 +85,43 @@
 # for i in range(3,247563):
 #     f(i)
 # print((f(247563)//519-477*f(247560))//f(247557))
+
+#14
+# def to_n(n,b):
+#     rez=[]
+#     while n>0:
+#         a=(n%b)
+#         rez.append(a)
+#         n=n//b
+#     return rez[::-1]
+# g=5*1296**2021-4*216**2022+3*36**2023-2*6**2024-2025
+# l=to_n(g,36)
+# d=0
+# for i in l:
+#     if i%2==0:
+#         d=d+1
+# print(d)
+
+#19-21
+def f(n1,n2,h):
+    if n1+n2>=154:
+        if h%2==t%2:
+            return 1
+        else:
+            return 0
+    if h>t:
+        return 0
+    if h%2==t%2:
+        return f(n1+4,n2,h+1) and f(n1,n2+4,h+1) and f(n1*3,n2,h+1) and f(n1,n2*3,h+1)
+    return f(n1 + 4, n2, h+1) or f(n1, n2 + 4, h+1) or f(n1 * 3, n2, h+1) or f(n1, n2 * 3, h+1)
+t=2
+l=[]
+m=[]
+for s in range(1,143):
+    if f(11,s,0)==1:
+        l.append(s)
+t=4
+for s in range(1,143):
+    if f(11,s,0)==1 and s not in l:
+        m.append(s)
+print(m)
