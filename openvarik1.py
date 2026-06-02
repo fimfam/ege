@@ -103,25 +103,26 @@
 # print(d)
 
 #19-21
-def f(n1,n2,h):
-    if n1+n2>=154:
-        if h%2==t%2:
-            return 1
-        else:
-            return 0
-    if h>t:
-        return 0
-    if h%2==t%2:
-        return f(n1+4,n2,h+1) and f(n1,n2+4,h+1) and f(n1*3,n2,h+1) and f(n1,n2*3,h+1)
-    return f(n1 + 4, n2, h+1) or f(n1, n2 + 4, h+1) or f(n1 * 3, n2, h+1) or f(n1, n2 * 3, h+1)
-t=2
-l=[]
-m=[]
-for s in range(1,143):
-    if f(11,s,0)==1:
-        l.append(s)
-t=4
-for s in range(1,143):
-    if f(11,s,0)==1 and s not in l:
-        m.append(s)
-print(m)
+# def f(n1,n2,h):
+#     if n1+n2>=154:
+#         if h%2==t%2:
+#             return 1
+#         else:
+#             return 0
+#     if h>t:
+#         return 0
+#     if h%2==t%2:
+#         return f(n1+4,n2,h+1) and f(n1,n2+4,h+1) and f(n1*3,n2,h+1) and f(n1,n2*3,h+1)
+#     return f(n1 + 4, n2, h+1) or f(n1, n2 + 4, h+1) or f(n1 * 3, n2, h+1) or f(n1, n2 * 3, h+1)
+# t=2
+# l=[]
+# m=[]
+# for s in range(1,143):
+#     if f(11,s,0)==1:
+#         l.append(s)
+# t=4
+# for s in range(1,143):
+#     if f(11,s,0)==1 and s not in l:
+#         m.append(s)
+# print(m)
+
