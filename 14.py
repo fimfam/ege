@@ -64,3 +64,31 @@
 # print(g)
 #
 
+#28935
+# from string import ascii_lowercase
+# for x in "0123456789"+ascii_lowercase[:13]:
+#     n1="761"+x+"035"
+#     n2="338"+x+"932"
+#     n=int(n1,23)+int(n2,23)
+#     if n%22==0:
+#         print(x,n//22)
+
+
+#28760
+from string import ascii_lowercase
+def to_n(n,b):
+    s="0123456789"+ascii_lowercase
+    rez=""
+    while n>0:
+        a=s[n%b]
+        rez=a+rez
+        n=n//b
+    return rez
+
+t=2*2187**567+729**566-2*243**565+81**564-2*27**563-6561
+r=to_n(t,27)
+p=0
+for i in r:
+    if int(i,27)%2==0 and int(i,27)/2>9:
+        p=p+1
+print(p)
