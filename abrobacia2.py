@@ -28,5 +28,28 @@
 #     if int(r,3)>=177:
 #         print(n)
 #
-#8
-print(int("35225",6))
+#8,12,13
+# print(int("11111110",2))
+# print(bin(180))
+from string import ascii_lowercase
+
+#14
+def to_n(n,b):
+    s='0123456789'+ascii_lowercase
+    rez=""
+    while n>0:
+        a=s[n%b]
+        rez=a+rez
+        n=n//b
+    return rez
+
+l=120
+print(to_n(l,11))
+
+for x in range(0,3000):
+    t=(9*11**210)+(8*11**150)-x
+    r=to_n(t,11)
+    if r.count("0")==60:
+        print(x)
+
+
