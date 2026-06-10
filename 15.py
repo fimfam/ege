@@ -39,11 +39,34 @@
 #     if f==1:
 #         print(A)
 
-for A in range(1,1000):
-    f=1
-    for x in range(1,1000):
-        Fu=(x%25==0)<=((not(x%A==0))<=(not(x%60==0)))
-        if Fu==False:
-            f=0
-    if f==1:
-        print(A)
+# for A in range(1,1000):
+#     f=1
+#     for x in range(1,1000):
+#         Fu=(x%25==0)<=((not(x%A==0))<=(not(x%60==0)))
+#         if Fu==False:
+#             f=0
+#     if f==1:
+#         print(A)
+
+
+
+#27770
+# for A in range(1,1000):
+#     f=1
+#     for x in range(1000):
+#         fu=(x%21==0) <= ((not x%A==0) <= (not x%77==0))
+#         if fu==False:
+#             f=0
+#     if f==1:
+#         print(A)
+
+#23274
+# for A in range(1,500):
+#     f=1
+#     for x in range(0,500):
+#         for y in range(0,500):
+#             fu=(2*x+y!=110) or (x<y) or (A<x)
+#             if fu==False:
+#                 f=0
+#     if f==1:
+#         print(A)

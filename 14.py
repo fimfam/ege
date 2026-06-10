@@ -75,20 +75,33 @@
 
 
 #28760
-from string import ascii_lowercase
-def to_n(n,b):
-    s="0123456789"+ascii_lowercase
-    rez=""
-    while n>0:
-        a=s[n%b]
-        rez=a+rez
-        n=n//b
-    return rez
+# from string import ascii_lowercase
+# def to_n(n,b):
+#     s="0123456789"+ascii_lowercase
+#     rez=""
+#     while n>0:
+#         a=s[n%b]
+#         rez=a+rez
+#         n=n//b
+#     return rez
+#
+# t=2*2187**567+729**566-2*243**565+81**564-2*27**563-6561
+# r=to_n(t,27)
+# p=0
+# c=0
+# for i in r:
+#     if int(i,27)%2==0 and int(i,27)>9:
+#         p=p+1
+#         print(i, end=' ')
+# print(p,c)
 
-t=2*2187**567+729**566-2*243**565+81**564-2*27**563-6561
-r=to_n(t,27)
-p=0
-for i in r:
-    if int(i,27)%2==0 and int(i,27)/2>9:
-        p=p+1
-print(p)
+#25236
+# for x in range(0,500000):
+#     r=1000000+x
+#     for p in range(11,36):
+#         n1="29a1"
+#         n2="47771"
+#         n3="12a"
+#         n=int(n1,p)+int(n2,p)+int(n3,p)
+#         if n==r:
+#             print(p)
