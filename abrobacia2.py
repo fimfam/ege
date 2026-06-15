@@ -67,23 +67,73 @@
 # print(f(37811))
 
 #17
-with open("C:/Users/1/Downloads/17_29971.txt") as f:
-    l=f.readlines()
-    l=list(map(int,l))
-    # for i in range(len(l)):
-    #     l[i]=int(l[i])
-print(l[:5])
-m=-100000
-for i in l:
-    if i>m and str(i)[-2:]=="33":
-        m=i
-print(m)
-p=0
+# with open("C:/Users/1/Downloads/17_29971.txt") as f:
+#     l=f.readlines()
+#     l=list(map(int,l))
+#     # for i in range(len(l)):
+#     #     l[i]=int(l[i])
+# print(l[:5])
+# m=-100000
+# for i in l:
+#     if i>m and str(i)[-2:]=="33":
+#         m=i
+# print(m)
+# p=0
+# k=[]
+# for i in range(len(l)-2):
+#     a,b,c=l[i],l[i+1],l[i+2]
+#     if ((9<abs(a)<=99)+(9<abs(b)<=99)+(9<abs(c)<=99))==2 and (a+b+c)**2<m:
+#         k.append(a+b+c)
+#         p=p+1
+# print(p,max(k))
+
+#19-21
+t=2
+def f(n,h):
+    if n<=15:
+        if t%2==h%2:
+            return 1
+        return 0
+    if h>t:
+        return 0
+    if h%2==t%2:
+        return f(n-3,h+1) and f(n-7,h+1) and f(n//4,h+1)
+    return f(n-3,h+1) or f(n-7,h+1) or f(n//4,h+1)
+
+t=2
+l=[]
+for s in (16,99):
+    if f(s,0)==1:
+        l.append(s)
+t=4
 k=[]
-for i in range(len(l)-2):
-    a,b,c=l[i],l[i+1],l[i+2]
-    if ((9<abs(a)<=99)+(9<abs(b)<=99)+(9<abs(c)<=99))==2 and (a+b+c)**2<m:
-        k.append(a+b+c)
-        p=p+1
-print(p,max(k))
+for s in range(16,99):
+    if f(s,0)==1 and s not in l:
+        k.append(s)
+print(k)
+
+
+
+
+#20
+# t=1
+# l=[]
+# for s in range(1,99):
+#     if f(s,0)==1:
+#         l.append(s)
+# k=[]
+# t=3
+# for s in range(1,99):
+#     if f(s,0)==1 and s not in l:
+#         k.append(s)
+# print(k)
+
+#19
+# l=[]
+# for s in range(60,100):
+#     if f(s,0)==1:
+#         l.append(s)
+# print(l)
+
+
 
