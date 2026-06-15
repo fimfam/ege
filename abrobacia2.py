@@ -53,14 +53,37 @@
 #     if r.count("0")==60:
 #         print(x)
 #16
-from functools import*
-@lru_cache()
-def f(n):
-    3*g(n-3)+7
-@lru_cache()
-def g(n):
-    if n <=20:
-        return n+2
-    return g(n-3)
-print(f(37811))
+# from functools import*
+# @lru_cache()
+# def f(n):
+#     return 3*g(n-3)+7
+# @lru_cache()
+# def g(n):
+#     if n <=20:
+#         return n+2
+#     return g(n-3)+1
+# for i in range(0,37811):
+#     g(i)
+# print(f(37811))
+
+#17
+with open("C:/Users/1/Downloads/17_29971.txt") as f:
+    l=f.readlines()
+    l=list(map(int,l))
+    # for i in range(len(l)):
+    #     l[i]=int(l[i])
+print(l[:5])
+m=-100000
+for i in l:
+    if i>m and str(i)[-2:]=="33":
+        m=i
+print(m)
+p=0
+k=[]
+for i in range(len(l)-2):
+    a,b,c=l[i],l[i+1],l[i+2]
+    if ((9<abs(a)<=99)+(9<abs(b)<=99)+(9<abs(c)<=99))==2 and (a+b+c)**2<m:
+        k.append(a+b+c)
+        p=p+1
+print(p,max(k))
 

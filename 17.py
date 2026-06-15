@@ -59,13 +59,46 @@
 # print(d,max(r))
 #
 
-with open("C:/Users/1/Downloads/17_28762.txt") as f:
+
+#27301
+# with open("C:/Users/1/Downloads/17_27301 (1).txt") as f:
+#     l=f.readlines()
+#     l=list(map(int,l))
+# print(l[:5])
+# m=-100000
+# for i in l:
+#     if i>m and str(i)[:2]=="45":
+#         m=i
+# print(m)
+# p=0
+# k=[]
+# for i in range(len(l)-2):
+#     a,b,c=l[i],l[i+1],l[i+2]
+#     if (a<0)+(b<0)+(c<0)==1 and (a+b+c)>=m:
+#         if str(a+b+c)[-2:]=="45":
+#             k.append(a+b+c)
+#         p=p+1
+# print(p,min(k))
+
+#23952
+with open("C:/Users/1/Downloads/17_23952.txt") as f:
     l=f.readlines()
     l=list(map(int,l))
 print(l[:5])
-p=[]
+m=0
 for i in l:
-    if i%23==0:
-        p.append(i)
+    if i>m and str(i)[-2:]=="93":
+        m=i
+print(m)
+p=0
+k=[]
+for i in range(len(l)-1):
+    a,b=l[i],l[i+1]
+    if  ((a>m)+(b>m))==1:
+        if (str(a)[0]=='9') + (str(b)[0]=="9")>=1:
+            k.append(max(a,b))
+            p=p+1
+print(p,sum(k))
+
 
 
