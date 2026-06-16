@@ -89,33 +89,121 @@
 #         print(s)
 #
 
-def f(n1,n2,h):
-    if n1+n2>=99:
-        if h%2==t%2:
-            return 1
-        else:
-            return 0
-    if h>t:
-        return 0
-    if h%2==t%2:
-        return f(n1+1,n2,h+1) and f(n1,n2+1,h+1) and f(n1*3,n2,h+1) and f(n1,n2*3,h+1)
-    else:
-        return f(n1 + 1, n2, h + 1) or f(n1, n2 + 1, h + 1) or f(n1 * 3, n2, h + 1) or f(n1, n2 * 3, h + 1)
+# def f(n1,n2,h):
+#     if n1+n2>=99:
+#         if h%2==t%2:
+#             return 1
+#         else:
+#             return 0
+#     if h>t:
+#         return 0
+#     if h%2==t%2:
+#         return f(n1+1,n2,h+1) and f(n1,n2+1,h+1) and f(n1*3,n2,h+1) and f(n1,n2*3,h+1)
+#     else:
+#         return f(n1 + 1, n2, h + 1) or f(n1, n2 + 1, h + 1) or f(n1 * 3, n2, h + 1) or f(n1, n2 * 3, h + 1)
+# # for s in range(1,99):
+# #     if f(9,s,0)==1:
+# #         print((s))
+#
+# l=[]
+# t=2
 # for s in range(1,99):
 #     if f(9,s,0)==1:
-#         print((s))
+#         l.append(s)
+# print(l)
+# t=4
+# for s in range(1,99):
+#     if f(9,s,0) and s not in l:
+#         print(s)
 
-l=[]
-t=2
-for s in range(1,99):
-    if f(9,s,0)==1:
-        l.append(s)
-print(l)
-t=4
-for s in range(1,99):
-    if f(9,s,0) and s not in l:
-        print(s)
+#23452
+# def f(n,h):
+#     if n>=231:
+#         if h%2==t%2:
+#             return 1
+#         return 0
+#     if h>t:
+#         return 0
+#     if h%2==t%2:
+#         return f(n+3,h+1) and f(n*3,h+1)
+#     return f(n+5,h+1) or f(n*3,h+1)
+# 21
+# t=2
+# l=[]
+# for s in range(9,120):
+#     if f(s,0)==1:
+#         l.append(s)
+# t=4
+# k=[]
+# for s in range(9,120):
+#     if f(s,0)==1 and s not in l:
+#         k.append(s)
+# print(max(k))
+
+#20
+# t=1
+# l=[]
+# for s in range(9,120):
+#     if f(s,0)==1:
+#         l.append(s)
+# t=3
+# k=[]
+# for s in range(9,120):
+#     if f(s,0)==1 and s not in l:
+#         k.append(s)
+# print(k)
+
+#19
+# t=2
+# l=[]
+# for s in range(9,120):
+#     if f(s,0)==1:
+#         l.append(s)
+# print(min(l))
 
 
+#23337
+# def f(n1,n2,h):
+#     if n1+n2<=200:
+#         if h%2==t%2:
+#             return 1
+#         return 0
+#     if h>t:
+#         return 0
+#     if h%2==t%2:
+#         return f(n1-3,n2-4,h+1) and f(n1-8,n2//2,h+1) and f(n1//2,n2-10,h+1)
+#     return f(n1-3,n2-4,h+1) or f(n1-8,n2//2,h+1) or f(n1//2,n2-10,h+1)
+# 21
+# t=2
+# l=[]
+# for s in range(100,300):
+#     if f(110,s,0)==1:
+#         l.append(s)
+# t=4
+# k=[]
+# for s in range(100,300):
+#     if f(110,s,0)==1 and s not in l:
+#         k.append(s)
+# print(min(k))
 
+#20
+# t=1
+# l=[]
+# for s in range(100,300):
+#     if f(110,s,0)==1:
+#         l.append(s)
+# t=3
+# k=[]
+# for s in range(100,300):
+#     if f(110,s,0)==1 and s not in l:
+#         k.append(s)
+# print(k)
+
+# 19
+# t=2
+# l=[]
+# for s in range(100,200):
+#     if f(110,s,0)==1:
+#         l.append(s)
+# print(min(l))
 

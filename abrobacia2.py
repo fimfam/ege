@@ -88,29 +88,31 @@
 # print(p,max(k))
 
 #19-21
-t=2
-def f(n,h):
-    if n<=15:
-        if t%2==h%2:
-            return 1
-        return 0
-    if h>t:
-        return 0
-    if h%2==t%2:
-        return f(n-3,h+1) and f(n-7,h+1) and f(n//4,h+1)
-    return f(n-3,h+1) or f(n-7,h+1) or f(n//4,h+1)
-
-t=2
-l=[]
-for s in (16,99):
-    if f(s,0)==1:
-        l.append(s)
-t=4
-k=[]
-for s in range(16,99):
-    if f(s,0)==1 and s not in l:
-        k.append(s)
-print(k)
+# t=2
+# def f(n,h):
+#     if n<=15:
+#         if t%2==h%2:
+#             return 1
+#         return 0
+#     if h>t:
+#         return 0
+#     if h%2==t%2:
+#         return f(n-3,h+1) and f(n-7,h+1) and f(n//4,h+1)
+#     return f(n-3,h+1) or f(n-7,h+1) or f(n//4,h+1)
+#
+# t=2
+# l=[]
+# for s in range(16,99):
+#     if f(s,0)==1:
+#         l.append(s)
+# print(l)
+#
+# t=4
+# k=[]
+# for s in range(16,99):
+#     if f(s,0)==1 and s not in l:
+#         k.append(s)
+# print(k)
 
 
 
@@ -128,12 +130,21 @@ print(k)
 #         k.append(s)
 # print(k)
 
-#19
+# 19
 # l=[]
-# for s in range(60,100):
+# for s in range(16,100):
 #     if f(s,0)==1:
 #         l.append(s)
 # print(l)
 
+#23
+def f(m,n):
+    if m==n:
+        return 1
+    if m<n:
+        return 0
+    if m==9:
+        return 0
+    return f(m-1,n)+f(m-3,n)+f(m//2,n)
 
-
+print(f(19,12)*f(12,3))
